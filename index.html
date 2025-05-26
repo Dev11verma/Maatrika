@@ -519,41 +519,139 @@
     </ul>
   </nav>
 
-  <main>
-    <section id="welcome" tabindex="0" aria-label="Welcome section">
+<main>
+    <section id="welcome">
       <h1>Welcome to Maatrika Organic</h1>
-      <p>Discover the purest, handcrafted organic soaps made with love and natural ingredients. Experience nature's care with every wash.</p>
-      <button aria-label="Shop Now">Shop Now</button>
+      <p>Discover the goodness of nature through handmade, chemical-free skincare designed for all skin types. Your skin deserves purity.</p>
+      <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">Explore Products</button>
     </section>
 
-    <section id="products" tabindex="0" aria-label="Our Products">
-      <h2>Our Products</h2>
-      <div class="product-list">
-        <article class="product-item" tabindex="0" aria-expanded="false" aria-controls="details1">
-          <div class="product-name">Lavender Bliss</div>
-          <div id="details1" class="product-details" aria-hidden="true">
-            <p>Calming lavender essential oils blended with organic shea butter for a soothing experience.</p>
-            <button aria-label="Buy Lavender Bliss Soap">Buy Now</button>
-          </div>
-        </article>
+ <section id="products">
+  <h2>Our Products</h2>
+  <div class="product-list">
 
-        <article class="product-item" tabindex="0" aria-expanded="false" aria-controls="details2">
-          <div class="product-name">Neem & Turmeric Glow</div>
-          <div id="details2" class="product-details" aria-hidden="true">
-            <p>Neem and turmeric packed soap for natural glow and anti-acne benefits.</p>
-            <button aria-label="Buy Neem & Turmeric Glow Soap">Buy Now</button>
-          </div>
-        </article>
-
-        <article class="product-item" tabindex="0" aria-expanded="false" aria-controls="details3">
-          <div class="product-name">Sandalwood Serenity</div>
-          <div id="details3" class="product-details" aria-hidden="true">
-            <p>Earthy sandalwood scent enriched with coconut oil to deeply nourish skin.</p>
-            <button aria-label="Buy Sandalwood Serenity Soap">Buy Now</button>
-          </div>
-        </article>
+    <!-- Live Products -->
+    <div class="product-item">
+      <img src="Rice.jpg" alt="Golden Rice Glow" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Golden Rice Glow</div>
+      <div class="product-details">
+        <p>Made with nutrient-rich rice extract for glowing skin.</p>
+        <button>Buy Now</button>
       </div>
-    </section>
+    </div>
+
+    <div class="product-item">
+      <img src="Rose-Cream.jpeg" alt="Radiant Rose Cream" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Radiant Rose Cream</div>
+      <div class="product-details">
+        <p>Infused with pure rose extract and floral petals.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="Ubtan-soap.jpeg" alt="Nourishing Ubtan Blend" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Nourishing Ubtan Blend</div>
+      <div class="product-details">
+        <p>A soothing cleanser made with traditional ubtan herbs.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="Milk-Soap.jpeg" alt="Pure Milk Soap Bar" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Pure Milk Soap Bar</div>
+      <div class="product-details">
+        <p>Gentle and moisturizing soap made with pure milk.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="Turmeric-soap.jpeg" alt="Soothing Turmeric Elixir" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Soothing Turmeric Elixir</div>
+      <div class="product-details">
+        <p>Refreshing turmeric formula for radiant and clear skin.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Coming Soon Products -->
+    <div class="product-item">
+      <img src="Neem-soap.jpeg" alt="Herbal Neem Soap" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Herbal Neem Soap</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="honey-soap.jpeg" alt="Honey Infusion Soap" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Honey Infusion Soap</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="lavender-soap.jpg" alt="Lavender Calm Bar" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Lavender Calm Bar</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="aloe-soap.jpg" alt="Aloe Hydrating Bar" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Aloe Hydrating Bar</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="sandal-soap.jpg" alt="Sandalwood Bliss" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Sandalwood Bliss</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="charcoal-soap.jpg" alt="Charcoal Detox Bar" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Charcoal Detox Bar</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="mint-soap.jpg" alt="Mint Cooling Soap" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Mint Cooling Soap</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="coffee-soap.jpg" alt="Coffee Exfoliating Bar" class="product-image" width="150" height="150" />
+      <div class="product-name" onclick="toggleDetails(this)">Coffee Exfoliating Bar</div>
+      <div class="product-details">
+        <p>Coming Soon…</p>
+        <button disabled>Coming Soon</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <section id="benefits" tabindex="0" aria-label="Benefits of Our Soaps">
       <h2>Benefits of Our Soaps</h2>
@@ -688,9 +786,13 @@
 
   </main>
 
-  <footer>
-    &copy; 2025 Maatrika Organic. All rights reserved.
+   <!-- ... your existing content ... -->
+
+  <footer style="text-align: center; padding: 20px; font-family: 'Arial', sans-serif; color: #555;">
+    &copy; 2025 Maatrika Organic. All rights reserved.<br>
+    Made with <span style="color: #e25555;">&#10084;&#65039;</span> by Team Maatrika
   </footer>
+
 
   <script>
     // Mobile menu toggle
@@ -784,5 +886,12 @@
       });
     });
   </script>
+
+  <!-- ... your existing content ... -->
+
+<footer style="text-align: center; padding: 20px; font-family: 'Arial', sans-serif; color: #555;">
+  Made with <span style="color: #e25555;">&#10084;&#65039;</span> by Team Maatrika
+</footer>
+
 </body>
 </html>
